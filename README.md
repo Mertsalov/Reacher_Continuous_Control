@@ -27,21 +27,109 @@ The task is episodic, and in order to solve the environment,  your agent must ge
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
-### Getting Started
+### Installation
+
+The installation of the software is accomplished with the package manager, conda. Installing Anaconda (https://www.anaconda.com/) will include conda as well as facilitate the installation of other data science software packages. The Jupyter Notebook App is also required for running this project and is installed automatically with Anaconda.
+
+The dependencies for this project can be installed by following the instructions at https://github.com/udacity/deep-reinforcement-learning#dependencies.  Required components include but are are not limited to Python 3.6 (I specifically used 3.6.6), and PyTorch v0.4, and a version of the Unity ML-Agents toolkit. Note that ML-Agents are only supported on Microsoft Windows 10. I only used Windows 10, so cannot vouch for the accuracy of the instructions for other operating systems.
+
+#### 1. After installing anaconda, create (and activate) an environment
+
+- **Linux** or **Mac**:
+
+  In a terminal window, perform the following commands:
+
+```
+conda create --name drlnd python=3.6
+source activate drlnd
+```
+
+- **Windows**:
+
+  Make sure you are using the anaconda command line rather than the usual windows cmd.exe. 
+
+```
+conda create --name drlnd python=3.6 
+activate drlnd
+```
+
+#### 2. Clone the Udacity Deep Reinforcement Learning Nanodegree repository and install dependencies.
+
+The instructions at https://github.com/udacity/deep-reinforcement-learning indicate that you should enter the following on the command line to clone the the repository and install the dependencies:
+
+```
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+However, for Windows 10, this did not work for me. The pip command fails when it tries to install torch 0.4.0. This version may no longer be available. I edited the dependencies shown in the requirements.txt file in the directory and changed the line for torch from
+
+ `torch==0.4.0` to `torch==0.4.1`. 
+
+The pip command worked after the change. Otherwise you can install the required packages in the requirements folder manually. Sometimes these software packages change and you may need to refer to the specific instructions for an individual package. For example, https://pytorch.org/get-started/locally/ may be helpful for installing PyTorch. 
+
+If you clone the DRLND repository, the original files from the project can be found in the folder deep-reinforcement-learning\p1_navigation
+
+##### 3. Clone or copy my repository or folder for this project
+
+The folder is named p2_continuous-control.
+
+#### 4. Download the Unity environment for this project
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
 
-    - **_Version 1: One (1) Agent_**
-        - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
-        - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
-        - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
-        - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
-    
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
-
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
+- **_Version 1: One (1) Agent_**
+  - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+  - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
+  - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+  - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
 2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
+
+The Jupyter notebook for running the code is called `Continuous_Control.ipynb`. The folder name indicated in Section1 of the notebook for starting the environment must match one of these.
+
+_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+
+(_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
+
+#### 5. Prepare and use Jupyter Notebooks for training the agent and for running the software.
+
+Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment:
+
+```
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+These steps only need to be performed once. 
+
+
+## Instructions
+
+1. In a terminal window, specifically an Anaconda terminal window for Microsoft Windows, activate the conda environment if not already done:
+
+- **Linux** or **Mac**:
+
+```
+source activate drlnd
+```
+
+- **Windows**:
+
+  Make sure you are using the anaconda command line rather than the usual windows cmd.exe. 
+
+```
+activate drlnd
+```
+
+1. Change directory to the `p2_continuous-control` folder. Run Jupyter Notebook:
+
+`jupyter notebook`
+
+1. Open the notebook `Continuous_Control.ipynb` to train the single-agent model. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel`menu:
+
+[![Kernel](https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png)](https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png)
+
 
 ### Instructions
 
