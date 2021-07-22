@@ -6,7 +6,7 @@
 
 # Project: Continuous Control
 
-### Introduction
+## Introduction
 
 For this project, you will work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
 
@@ -20,14 +20,13 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 For this project, we will provide you with the version of the Unity environment that contains a single agent.
 
-
 #### Option 1: Solve the First Version
 
 The task is episodic, and in order to solve the environment,  your agent must get an average score of +30 over 100 consecutive episodes.
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
-### Installation
+## Installation
 
 #### 0. Installing Anaconda (https://www.anaconda.com/).
 
