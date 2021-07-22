@@ -99,7 +99,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 These steps only need to be performed once. 
 
 
-## Instructions
+## Dependencies
 
 1. In a terminal window, specifically an Anaconda terminal window for Microsoft Windows, activate the conda environment if not already done:
 
@@ -117,11 +117,9 @@ source activate drlnd
 activate drlnd
 ```
 
-1. Change directory to the `p2_continuous-control` folder. Run Jupyter Notebook:
-
-`jupyter notebook`
-
-1. Open the notebook `Continuous_Control.ipynb` to train the single-agent model. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel`menu:
+1. Change directory to the `p2_continuous-control` folder.
+2. Run Jupyter Notebook: `jupyter notebook`
+3. Open the notebook `Continuous_Control.ipynb` to train the single-agent model. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel`menu:
 
 [![Kernel](https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png)](https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png)
 
