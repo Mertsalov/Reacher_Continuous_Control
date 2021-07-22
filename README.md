@@ -63,13 +63,7 @@ cd deep-reinforcement-learning/python
 pip install .
 ```
 
-However, for Windows 10, this did not work for me. The pip command fails when it tries to install torch 0.4.0. This version may no longer be available. I edited the dependencies shown in the requirements.txt file in the directory and changed the line for torch from
-
- `torch==0.4.0` to `torch==0.4.1`. 
-
-The pip command worked after the change. Otherwise you can install the required packages in the requirements folder manually. Sometimes these software packages change and you may need to refer to the specific instructions for an individual package. For example, https://pytorch.org/get-started/locally/ may be helpful for installing PyTorch. 
-
-If you clone the DRLND repository, the original files from the project can be found in the folder deep-reinforcement-learning\p1_navigation
+If you clone the DRLND repository, the original files from the project can be found in the folder deep-reinforcement-learning\p2_continuous-control
 
 ##### 3. Clone or copy my repository or folder for this project
 
