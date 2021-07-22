@@ -30,11 +30,11 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 1. Installing Anaconda (https://www.anaconda.com/).
 
-The dependencies for this project can be installed by following the instructions at https://github.com/udacity/deep-reinforcement-learning#dependencies.  Required components include Python 3.6 (My Python version: 3.6.3), and PyTorch v0.4 (My Torch  version 1.8.1), and the Unity ML-Agents toolkit.
+   The dependencies for this project can be installed by following the instructions at https://github.com/udacity/deep-reinforcement-learning#dependencies.  Required components include Python 3.6 (My Python version: 3.6.3), and PyTorch v0.4 (My Torch  version 1.8.1), and the Unity ML-Agents toolkit.
 
-Unity Machine Learning Agents (ML-Agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
+   Unity Machine Learning Agents (ML-Agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
 
-To set up your python environment to run the code in this repository, follow the instructions below.
+   To set up your python environment to run the code in this repository, follow the instructions below.
 
 2. Create (and activate) a new environment with Python 3.6.
 
